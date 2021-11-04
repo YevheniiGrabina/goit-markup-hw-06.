@@ -743,10 +743,10 @@ body {
   display: flex;
   overflow: hidden;
 }
-.project-link:focus{
-box-sizing: border-box;
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-
+.project-link:focus {
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-group {
   border: 1px solid #eeeeee;
@@ -832,17 +832,65 @@ img {
   opacity: 0;
   pointer-events: none;
 }
-.modal-form{
+.modal-form {
   padding: 40px;
 }
-.modal-title{
-font-weight: 700;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
-letter-spacing: 0.03em;
-padding-bottom: 30px;
+.modal-title {
+  display: inline-block;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
 }
-.form-input{
-  display:flex;
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.form-label {
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.form-input {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.input-icon {
+  position: absolute;
+  top: 32px;
+  left: 14px;
+}
+.input-comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+.form-policy {
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
+}
+.contact-form-btn {
+  color: var(--primary-title-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.87;
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
