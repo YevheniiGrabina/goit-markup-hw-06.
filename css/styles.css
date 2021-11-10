@@ -811,6 +811,7 @@ img {
   position: absolute;
   width: 528px;
   height: 581px;
+  padding: 40px;
   background: var(--primary-title-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -826,11 +827,18 @@ img {
   height: 30px;
   border-radius: 50%;
   position: absolute;
+  cursor: pointer;
   top: 8px;
   right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: fill 250ms linear , border-color 250ms linear;
+}
+.modal-btn:hover,
+.modal-btn:focus{
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -838,8 +846,6 @@ img {
   pointer-events: none;
 }
 .modal-form {
-  margin-left: auto;
-  margin-right: auto;
   width: 448px;
 }
 .modal-title {
@@ -850,15 +856,19 @@ img {
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 40px;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
 }
-.form-field {
+.form-label {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   transition: border-color 250ms linear;
+  margin-bottom: 10px;
 }
-.form-field input:focus,
+.form-comment{
+  margin-bottom: 20px;
+}
+.form-label input:focus,
 .input-comment:focus {
   border-color: var(--accent-color);
   outline: none;
@@ -866,7 +876,6 @@ img {
 .input-image {
   position: relative;
   display: block;
-  margin-bottom: 10px;
 }
 .madal-checkbox-label {
   display: flex;
@@ -899,19 +908,22 @@ img {
   background-repeat: no-repeat;
   background-position: 50%;
 }
+.madal-checkbox-label:focus:before{
+  color: var(--accent-color);
+}
 .checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-.form-field label {
+.form-label label {
   font-size: 12px;
   line-height: 1.17;
   font-weight: 400;
   letter-spacing: 0.01em;
   color: var(--secondary-text-colr);
 }
-.form-field input {
+.form-label input {
   width: 100%;
   padding: 12px;
   padding-left: 42px;
@@ -954,14 +966,13 @@ img {
     color: rgba(117, 117, 117, 0.5);
     transition: border-color 250ms linear;
 }
-.form-policy {
+.checkbox-agr {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   transition: border-color 250ms linear;
 }
-.form-policy:hover .madal-checkbox-label::before,
-.form-policy:focus .madal-checkbox-label::before {
+.checkbox-agr:hover .madal-checkbox-label::before,
+.checkbox-agr:focus .madal-checkbox-label::before {
   border-color: var(--accent-color);
 }
 .agreement {
@@ -977,6 +988,7 @@ img {
   border-radius: 4px;
   width: 200px;
   height: 50px;
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
