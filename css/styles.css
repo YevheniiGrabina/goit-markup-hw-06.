@@ -900,7 +900,7 @@ img {
     background-color 250ms linear;
 }
 .madal-checkbox:checked + .madal-checkbox-label::before {
-  background-image: url(/images/iconcheck.svg);
+  background-image: url(../images/iconcheck.svg);
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   background-repeat: no-repeat;
