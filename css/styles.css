@@ -906,7 +906,7 @@ img {
   background-repeat: no-repeat;
   background-position: 50%;
 }
-.madal-checkbox:focus + .madal-checkbox-label::before {
+.madal-checkbox:focu + .madal-checkbox-label::before {
   border-color: var(--accent-color);
 }
 .checkbox {
